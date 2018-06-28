@@ -1,7 +1,7 @@
 TourGuide:RegisterGuide("Teldrassil (1-12)", "Darkshore (12-17)", "Alliance", function()
 return [[
 A The Balance of Nature (Part 1) |QID|456|
-C The Balance of Nature (Part 1) |QID|456|
+C The Balance of Nature (Part 1) |N|Should hit level 2| |QID|456|
 T The Balance of Nature (Part 1) |QID|456|
 A The Balance of Nature (Part 2) |QID|457|
 
