@@ -11,14 +11,18 @@ local ROWHEIGHT = 305/NUMROWS
 local offset = 0
 local rows = {}
 
-local function HideTooltip() GameTooltip:Hide() end
+local function HideTooltip()
+	if GameTooltip:IsOwned(this) then
+		GameTooltip:Hide()
+	end
+end
 
 local function ShowTooltip()
 	local f = this
 	if TourGuide.db.char.completion[f.guide] ~= 1 then return end
 
 	GameTooltip:SetOwner(f, "ANCHOR_RIGHT")
-	GameTooltip:SetText("This guide has been completed.  Shift-click to reset it.", nil, nil, nil, nil, true)
+	GameTooltip:SetText("This guide has been completed. Shift-click to reset it.", nil, nil, nil, nil, true)
 end
 
 local function OnClick()
@@ -44,13 +48,7 @@ TourGuide.guidelistframe = frame
 frame:SetFrameStrata("DIALOG")
 frame:SetWidth(660) frame:SetHeight(320+28)
 frame:SetPoint("TOPRIGHT", TourGuide.statusframe, "BOTTOMRIGHT")
-frame:SetBackdrop({
-	bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
-	edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-	edgeSize = 16,
-	insets = {left = 5, right = 5, top = 5, bottom = 5},
-	tile = true, tileSize = 16,
-})
+frame:SetBackdrop(ww.TooltipBorderBG)
 frame:SetBackdropColor(0.09, 0.09, 0.19, 1)
 frame:SetBackdropBorderColor(0.5, 0.5, 0.5, 0.5)
 frame:Hide()
@@ -59,7 +57,7 @@ local closebutton = CreateFrame("Button", nil, frame, "UIPanelCloseButton")
 closebutton:SetPoint("TOPRIGHT", frame, "TOPRIGHT")
 frame.closebutton = closebutton
 
-local title = ww.SummonFontString(frame, nil, "SubZoneTextFont", nil, "BOTTOMLEFT", frame, "TOPLEFT", 5, 0)
+local title = ww.SummonFontString(frame, nil, "SubZoneTextFont", nil, "BOTTOM", frame, "TOP")
 local fontname, fontheight, fontflags = title:GetFont()
 title:SetFont(fontname, 18, fontflags)
 title:SetText("Guide List")
@@ -97,8 +95,11 @@ frame.title = title
 		rows[i] = row
 	end
 
---frame:SetScript("OnShow", OnShow)
 frame:SetScript("OnShow", function()
+	local quad, vhalf, hhalf = TourGuide.GetQuadrant(TourGuide.statusframe)
+	local anchpoint = (vhalf == "TOP" and "BOTTOM" or "TOP")..hhalf
+	this:ClearAllPoints()
+	this:SetPoint(quad, TourGuide.statusframe, anchpoint)
 	TourGuide:UpdateGuideListPanel()
 	this:SetAlpha(0)
 	this:SetScript("OnUpdate", ww.FadeIn)
@@ -116,52 +117,6 @@ end)
 ww.SetFadeTime(frame, 0.7)
 
 table.insert(UISpecialFrames, "TourGuideGuideList")
---[[
-function TourGuide:CreateGuideListPanel()
-	frame = CreateFrame("Frame", nil, UIParent)
-	rows = {}
-	for i=1,NUMROWS*3 do
-		local anchor, point = rows[i-1], "BOTTOMLEFT"
-		if i == 1 then anchor, point = frame, "TOPLEFT"
-		elseif i == (NUMROWS + 1) then anchor, point = rows[1], "TOPRIGHT"
-		elseif i == (NUMROWS*2 + 1) then anchor, point = rows[NUMROWS + 1], "TOPRIGHT" end
-
-		local row = CreateFrame("CheckButton", nil, frame)
-		row:SetPoint("TOPLEFT", anchor, point)
-		row:SetHeight(ROWHEIGHT)
-		row:SetWidth(COLWIDTH)
-
-		local highlight = ww.SummonTexture(row, nil, nil, nil, "Interface\\HelpFrame\\HelpFrameButton-Highlight")
-		highlight:SetTexCoord(0, 1, 0, 0.578125)
-		highlight:SetAllPoints()
-		row:SetHighlightTexture(highlight)
-		row:SetCheckedTexture(highlight)
-
-		local text = ww.SummonFontString(row, nil, "GameFontWhite", nil, "LEFT", 6, 0)
-
-		--row:SetScript("OnClick", OnClick)
-		row:SetScript("OnEnter", ShowTooltip)
-		row:SetScript("OnLeave", HideTooltip)
-
-		row.text = text
-		rows[i] = row
-	end
-
-	frame:EnableMouseWheel()
-	frame:SetScript("OnMouseWheel", function()
-		local f,val = this,arg1
-		offset = offset - val*NUMROWS
-		if (offset + NUMROWS*2) > table.getn(self.guidelistframe) then offset = offset - NUMROWS end
-		if offset < 0 then offset = 0 end
-		self:UpdateGuidePanel()
-	end)
-
-	frame:SetScript("OnShow", OnShow)
-	ww.SetFadeTime(frame, 0.5)
-	OnShow(frame)
-	return frame
-end
-]]
 
 function TourGuide:UpdateGuideListPanel()
 	if not frame or not frame:IsVisible() then return end

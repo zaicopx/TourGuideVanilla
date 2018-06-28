@@ -11,18 +11,18 @@ end
 
 local cache = {}
 local function MapPoint(zone, x, y, desc)
-	TourGuide:DebugF(1, "Mapping %q - %s (%.2f, %.2f)", desc, zone, x, y)
+	TourGuide:Debug( string.format("Mapping %q - %s (%.2f, %.2f)", desc, zone, x, y))
 	local zi, zc = zone and zonei[zone], zone and zonec[zone]
 	if not zi then
-		if zone then TourGuide:PrintF("Cannot find zone %q, using current zone.", zone)
-		else TourGuide:Print("No zone provided, using current zone.") end
+		if zone then TourGuide:PrintF(L["Cannot find zone %q, using current zone."], zone)
+		else TourGuide:Print(L["No zone provided, using current zone."]) end
 
 		zi, zc = GetCurrentMapZone(), GetCurrentMapContinent()
 		zone = zonenames[zc][zi]
 	end
 
 	local opts = { title = "[TG] "..desc }
-	if TomTom then TomTom:AddMFWaypoint(zc, zi, x/100, y/100, opts) --AddZWaypoint(c,z,x,y,desc)  select(z, GetMapZones(c))
+	if TomTom then TomTom:AddMFWaypoint(zc, zi, x/100, y/100, opts)
 	elseif Cartographer_Waypoints then
 		local pt = NotePoint:new(zone, x/100, y/100, "[TG] "..desc)
 		Cartographer_Waypoints:AddWaypoint(pt)
@@ -41,27 +41,31 @@ function TourGuide:MapPfQuestNPC(qid, action)
 	local qLookup = pfDB["quests"]["data"]
 	if qLookup[qid] then
 		if action == "ACCEPT" then
-			if qLookup[qid]["start"]["U"] then -- NPC
-				for _, uid in pairs(qLookup[qid]["start"]["U"]) do
-					unitId = uid
-				end
-			elseif qLookup[qid]["start"]["O"] then -- Object
-				for _, oid in pairs(qLookup[qid]["start"]["O"]) do
-					objectId = oid
+			if qLookup[qid]["start"] then
+				if qLookup[qid]["start"]["U"] then -- NPC
+					for _, uid in pairs(qLookup[qid]["start"]["U"]) do
+						unitId = uid
+					end
+				elseif qLookup[qid]["start"]["O"] then -- Object
+					for _, oid in pairs(qLookup[qid]["start"]["O"]) do
+						objectId = oid
+					end
 				end
 			end
 		else
-			if qLookup[qid]["end"]["U"] then -- NPC
-				for _, uid in pairs(qLookup[qid]["end"]["U"]) do
-					unitId = uid
-				end
-			elseif qLookup[qid]["end"]["O"] then -- Object
-				for _, oid in pairs(qLookup[qid]["end"]["O"]) do
-					objectId = oid
+			if qLookup[qid]["end"] then
+				if qLookup[qid]["end"]["U"] then -- NPC
+					for _, uid in pairs(qLookup[qid]["end"]["U"]) do
+						unitId = uid
+					end
+				elseif qLookup[qid]["end"]["O"] then -- Object
+					for _, oid in pairs(qLookup[qid]["end"]["O"]) do
+						objectId = oid
+					end
 				end
 			end
 		end
-		self:DebugF(1, "pfQuest lookup A:%s U:%s O:%s", action, unitId, objectId)
+		self:Debug( string.format("pfQuest lookup A:%s U:%s O:%s", action, unitId, objectId))
 
 		if unitId ~= "UNKNOWN" then
 			local unitLookup = pfDB["units"]["data"]
@@ -82,7 +86,7 @@ function TourGuide:MapPfQuestNPC(qid, action)
 				end
 			end
 		end
-		self:DebugF(1, "%s: No NPC or Object information found for %s!", action, title)
+		self:Debug( string.format("%s: No NPC or Object information found for %s!", action, title))
 	end
 end
 
@@ -94,7 +98,7 @@ function TourGuide:MapLightHeadedNPC(qid, action)
 	local title, level = LightHeaded:QIDToTitleLevel(qid)
 	if action == "ACCEPT" then _, _, _, _, stype, npcname, npcid = LightHeaded:GetQuestInfo(title, level)
 	else _, _, _, _, _, _, _, stype, npcname, npcid = LightHeaded:GetQuestInfo(title, level) end
-	self:DebugF(1, "LightHeaded lookup %s %s %s %s %s", action, qid, stype, npcname, npcid)
+	self:Debug( string.format("LightHeaded lookup %s %s %s %s %s", action, qid, stype, npcname, npcid))
 	if stype ~= "npc" then return end
 
 	local data = LightHeaded:LoadNPCData(tonumber(npcid))
@@ -111,7 +115,7 @@ function TourGuide:ParseAndMapCoords(qid, action, note, desc, zone)
 		if TomTom.waypoints then
 			for k,wp in ipairs(TomTom.waypoints) do
 				if wp.title and string.sub(wp.title, 1, 5) == "[TG] " then
-					self:DebugF(1, "Removing %q from TomTom", wp.title)
+					self:Debug( string.format("Removing %q from TomTom", wp.title))
 					TomTom:RemoveWaypoint(wp, true)
 				end
 			end

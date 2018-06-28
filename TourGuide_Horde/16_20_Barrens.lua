@@ -27,8 +27,8 @@ A The Principal Source |QID|6127| |C|DRUID|
 H The Crossroads
 
 T Lost in Battle |QID|4921| |T|
-C Prowlers of the Barrens |QID|903| |N|Take the road west out of the Crossroads, past the bunker and the oasis (43,33).  Work your way north towards the harpies (40.4, 20.1).|
-C Harpy Lieutenants |QID|875| |N|Back at the Dry Hills (39.78, 16.14), where you did the first harpie quest.  These ones are a bit deeper in.|
+C Prowlers of the Barrens |QID|903| |N|Take the road west out of the Crossroads, past the bunker and the oasis (43,33). Work your way north towards the harpies (40.4, 20.1).|
+C Harpy Lieutenants |QID|875| |N|Back at the Dry Hills (39.78, 16.14), where you did the first harpie quest. These ones are a bit deeper in.|
 C The Principal Source |QID|6127| |C|DRUID| |U|15842| |N|Use the vial at the top of Dreadmist Peak (48.36, 18.95) to the east.|
 
 T Samophlange (Part 1) |QID|894| |N|East, past the road, near the Sludge Fen (52.42, 11.67)|
@@ -56,7 +56,7 @@ A Ziz Fizziks |QID|1483| |T|
 A Wenikee Boltbucket |QID|3921| |T|
 T Miner's Fortune |QID|896| |N|(63.32, 38.41)| |T|
 
-C The Stagnant Oasis |QID|877| |N|Southeast of crossroads at the Stagnant Oasis (55.58, 42.71).  Dive down in the center and use the seeds.|
+C The Stagnant Oasis |QID|877| |N|Southeast of crossroads at the Stagnant Oasis (55.58, 42.71). Dive down in the center and use the seeds.|
 C Verog the Dervish |QID|851| |N|Kill centaurs on the northwest side of the oasis until Verog is summoned (52.75, 41.72).|
 C Centaur Bracers |QID|855|
 
@@ -71,7 +71,7 @@ T Harpy Lieutenants |QID|875|
 A Serena Bloodfeather |QID|876|
 
 T Verog the Dervish |QID|851| |N|At the bunker to the west of the Crossroads (45.33, 28.45)|
-T Centaur Bracers |QID|855| |N|Skip Hezrul Bloodmark|
+T Centaur Bracers |QID|855| |S| |N|Skip "Hezrul Bloodmark"|
 
 C Serena Bloodfeather |N|Serena Bloodfeather - Northwest Barrens (38,11)| |QID|876|
 C Echeyakee |QID|881| |N|Located at (55.83, 17.08)|
@@ -86,8 +86,8 @@ T Serena Bloodfeather |QID|876| |T|
 A Letter to Jin'Zil |QID|1060| |T|
 
 C Altered Beings |QID|880| |N|Southeast at the Stagnant Oasis (55.74, 43.05)|
-C Stolen Silver |QID|3281| |N|To the east at the Raptor Grounds before Northwatch Hold... towards the back (58.06, 53.90).  You can sneak around on the mountain and drop in.|
-C The Angry Scytheclaws |QID|905| |N|Kill raptors for feathers, then place a feather at each nest.  Blue (52.58, 46.14), Yellow (52.07, 46.43), Red (52.43, 46.52)|
+C Stolen Silver |QID|3281| |N|To the east at the Raptor Grounds before Northwatch Hold... towards the back (58.06, 53.90). You can sneak around on the mountain and drop in.|
+C The Angry Scytheclaws |QID|905| |N|Kill raptors for feathers, then place a feather at each nest. Blue (52.58, 46.14), Yellow (52.07, 46.43), Red (52.43, 46.52)|
 C Raptor Horns |QID|865|
 K Lakota'mani |N|Around (47, 51)|
 A Lakota'mani |QID|883|
@@ -96,8 +96,8 @@ C Consumed by Hatred |QID|899|
 A Weapons of Choice |QID|893| |N|Don't sell your Blood Shards|
 T Lakota'mani |QID|883|
 
-A The Ashenvale Hunt |O| |QID|6382| |N|If you are level 20 (45, 59)|
-A Melor Sends Word |O| |QID|1130| |N|If you are level 20|
+A The Ashenvale Hunt |QID|6382| |N|If you are level 20 (45, 59)|
+A Melor Sends Word |QID|1130| |N|If you are level 20|
 
 T Tribes at War |QID|878| |T|
 A Blood Shards of Agamaggan |QID|5052| |T|
@@ -111,11 +111,11 @@ A Jorn Skyseer |QID|3261| |T|
 T Consumed by Hatred |QID|899| |T|
 T Altered Beings |QID|880| |T|
 A Hamuul Runetotem |QID|1489|
-N Almost leveled up |N|You should be 20, if not grind to get close|
+N Almost leveled up |LV|20| |N|You should be 20, if not grind to get close|
 F Thunder Bluff
 
-T Melor Sends Word |QID|1130| |O|
-A Steelsnap |QID|1131| |O|
+T Melor Sends Word |QID|1130|
+A Steelsnap |QID|1131|
 A The Ashenvale Hunt |QID|1131| |N|(40, 59)|
 H The Crossroads
 

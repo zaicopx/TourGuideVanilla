@@ -26,7 +26,7 @@ A Night Web's Hollow |QID|380| |T|
 A Scavenging Deathknell |QID|3902| |T|
 
 C Night Web's Hollow |N|Cave to the north (27.5, 58.0)| |QID|380|
-K Samuel Fipps |L|16333| |N|Take the road north, then east.  Samuel's in a little camp just south of the road (36,62)|
+K Samuel Fipps |L|16333| |N|Take the road north, then east. Samuel's in a little camp just south of the road (36,62)|
 C Scavenging Deathknell |QID|3902| |N|Boxes all over Deathknell|
 C Marla's Last Wish |N|Bury Samuel's remains at Marla's Grave (31.17, 65.05)| |QID|6395| |T|
 
@@ -78,7 +78,7 @@ T Doom Weed |QID|5482|
 
 C Fields of Grief (Part 1) |N|At the farm north of Deathknell (35,50)| |QID|365|
 C At War With The Scarlet Crusade (Part 1) |QID|427| |NODEBUG| |N|West of the farm.|
-C A New Plague (Part 2) |QID|368| |N|Along the shore (60,29).  Murlocs.... joy.|
+C A New Plague (Part 2) |QID|368| |N|Along the shore (60,29). Murlocs.... joy.|
 
 H Brill |SZ|Gallows' End Tavern|
 A Deaths in the Family |QID|354|
@@ -96,7 +96,7 @@ C The Mills Overrun |N|At Agamand Mills| |QID|426|
 C The Haunted Mills |QID|362| |N|He is at (47.34, 40.78)|
 C Deaths in the Family |QID|354| |N|These are at (49.74,36.34) (46.74,29.31) (44,33.64)|
 
-N Die on Purpose
+D Die |N|Take Rez Sickness|
 T The Mills Overrun |QID|426|
 A A Letter Undelivered |U|2839| |O| |QID|361|
 T Deaths in the Family |QID|354|
@@ -110,7 +110,7 @@ A Halgar's Summons |C|Warlock| |QID|1478|
 T Speak with Sevren |QID|355|
 A The Family Crypt |QID|408|
 C The Chill Of Death |QID|375| |N|Work your way north from town killing greater duskbats near the road.|
-B Coarse Thread |U|2320| |N|Just one is required|
+B [Coarse Thread] |L|2320| |N|Just one is required|
 T The Chill of Death |QID|375|
 
 R Undercity
@@ -143,7 +143,7 @@ A Delivery to Silverpine Forest |QID|445|
 
 C The Family Crypt |N|At Agamand Mills| |QID|408|
 
-N Die on Purpose
+D Die |N|Take Rez Sickness|
 T Return to the Magistrate |QID|360|
 T The Family Crypt |QID|408|
 T A New Plague (Part 4) |QID|492|

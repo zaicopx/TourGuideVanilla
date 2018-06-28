@@ -1,27 +1,8 @@
-
-local bg = {
-	bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
-	edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
-	edgeSize = 16,
-	insets = {left = 5, right = 5, top = 5, bottom = 5},
-	tile = true, tileSize = 16,
-}
-
 local ICONSIZE, CHECKSIZE, GAP = 16, 16, 8
 local FIXEDWIDTH = ICONSIZE + CHECKSIZE + GAP*4 - 4
 
 local TourGuide = TourGuide
 local ww = WidgetWarlock
-
-
-local function GetQuadrant(frame)
-	local x,y = frame:GetCenter()
-	if not x or not y then return "BOTTOMLEFT", "BOTTOM", "LEFT" end
-	local hhalf = (x > UIParent:GetWidth()/2) and "RIGHT" or "LEFT"
-	local vhalf = (y > UIParent:GetHeight()/2) and "TOP" or "BOTTOM"
-	return vhalf..hhalf, vhalf, hhalf
-end
-
 
 local f = CreateFrame("Button", nil, UIParent)
 TourGuide.statusframe = f
@@ -30,7 +11,7 @@ f:SetHeight(24)
 f:SetFrameStrata("LOW")
 f:EnableMouse(true)
 f:RegisterForClicks("LeftButtonUp","RightButtonUp")
-f:SetBackdrop(bg)
+f:SetBackdrop(ww.TooltipBorderBG)
 f:SetBackdropColor(0.09, 0.09, 0.19, 0.5)
 f:SetBackdropBorderColor(0.5, 0.5, 0.5, 0.5)
 
@@ -39,7 +20,7 @@ local icon = ww.SummonTexture(f, "ARTWORK", ICONSIZE, ICONSIZE, nil, "LEFT", che
 local text = ww.SummonFontString(f, "OVERLAY", "GameFontNormalSmall", nil, "RIGHT", -GAP-4, 0)
 text:SetPoint("LEFT", icon, "RIGHT", GAP-4, 0)
 
-local item = CreateFrame("Button", nil, UIParent)--, "SecureActionButtonTemplate")
+local item = CreateFrame("Button", nil, UIParent)
 item:SetFrameStrata("LOW")
 item:SetHeight(36)
 item:SetWidth(36)
@@ -78,6 +59,11 @@ f2:SetScript("OnUpdate", function()
 	end
 end)
 
+function TourGuide:HideStatusFrameChildren()
+	if TourGuide.objectiveframe:IsVisible() then HideUIPanel(TourGuide.objectiveframe) end
+	if TourGuide.optionsframe:IsVisible() then HideUIPanel(TourGuide.optionsframe) end
+	if TourGuide.guidelistframe:IsVisible() then HideUIPanel(TourGuide.guidelistframe) end	
+end
 
 function TourGuide:PositionStatusFrame()
 	if self.db.profile.statusframepoint then
@@ -92,7 +78,7 @@ function TourGuide:PositionStatusFrame()
 end
 
 
-function TourGuide:SetText(i)
+function TourGuide:SetStatusText(i)
 	self.current = i
 	local action, quest = self:GetObjectiveInfo(i)
 	local note = self:GetObjectiveTag("N")
@@ -104,7 +90,7 @@ function TourGuide:SetText(i)
 		text:SetAlpha(0)
 		elapsed = 0
 		f2:SetWidth(f:GetWidth())
-		f2anchor = select(3, GetQuadrant(f))
+		f2anchor = self.select(3, self.GetQuadrant(f))
 		f2:ClearAllPoints()
 		f2:SetPoint(f2anchor, f, f2anchor, 0, 0)
 		f2:SetAlpha(1)
@@ -130,11 +116,11 @@ end
 
 local lastmapped, lastmappedaction, tex, uitem
 function TourGuide:UpdateStatusFrame()
-	self:Debug(1, "UpdateStatusFrame", self.current)
+	self:Debug( "UpdateStatusFrame", self.current)
 
 	if self.updatedelay then
 		local _, logi = self:GetObjectiveStatus(self.updatedelay)
-		self:Debug(1, "Delayed update", self.updatedelay, logi)
+		self:Debug( "Delayed update", self.updatedelay, logi)
 		if logi then return end
 	end
 
@@ -147,9 +133,11 @@ function TourGuide:UpdateStatusFrame()
 			local action, name, quest = self:GetObjectiveInfo(i)
 			local turnedin, logi, complete = self:GetObjectiveStatus(i)
 			local note, useitem, optional, prereq, lootitem, lootqty = self:GetObjectiveTag("N", i), self:GetObjectiveTag("U", i), self:GetObjectiveTag("O", i), self:GetObjectiveTag("PRE", i), self:GetObjectiveTag("L", i)
-			self:Debug(11, "UpdateStatusFrame", i, action, name, note, logi, complete, turnedin, quest, useitem, optional, lootitem, lootqty, lootitem and GetItemCount(lootitem) or 0)
+			self:Debug( "UpdateStatusFrame", i, action, name, note, logi, complete, turnedin, quest, useitem, optional, lootitem, lootqty, lootitem and self.GetItemCount(lootitem) or 0)
+			local level = tonumber((self:GetObjectiveTag("LV", i)))
+			local needlevel = level and level > UnitLevel("player")
 			local hasuseitem = useitem and self:FindBagSlot(useitem)
-			local haslootitem = lootitem and GetItemCount(lootitem) >= lootqty
+			local haslootitem = lootitem and self.GetItemCount(lootitem) >= lootqty
 			local prereqturnedin = prereq and self.turnedin[prereq]
 
 			-- Test for completed objectives and mark them done
@@ -165,7 +153,7 @@ function TourGuide:UpdateStatusFrame()
 				if quest and questtext then
 					local qi = self:GetQuestLogIndexByName(quest)
 					for lbi=1,GetNumQuestLeaderBoards(qi) do
-						self:Debug(1, quest, questtext, qi, GetQuestLogLeaderBoard(lbi, qi))
+						self:Debug( quest, questtext, qi, GetQuestLogLeaderBoard(lbi, qi))
 						if GetQuestLogLeaderBoard(lbi, qi) == questtext then return self:SetTurnedIn(i, true) end
 					end
 				end
@@ -178,6 +166,7 @@ function TourGuide:UpdateStatusFrame()
 			elseif action == "TURNIN" then incomplete = not optional or logi
 			elseif action == "COMPLETE" then incomplete = not complete and (not optional or logi)
 			elseif action == "NOTE" or action == "KILL" then incomplete = not optional or haslootitem
+			elseif action == "GRIND" then incomplete = needlevel
 			else incomplete = not logi end
 
 			if incomplete then nextstep = i end
@@ -201,13 +190,13 @@ function TourGuide:UpdateStatusFrame()
 
 	if not nextstep then return end
 
-	self:SetText(nextstep)
+	self:SetStatusText(nextstep)
 	self.current = nextstep
 	local action, quest, fullquest = self:GetObjectiveInfo(nextstep)
 	local turnedin, logi, complete = self:GetObjectiveStatus(nextstep)
 	local note, useitem, optional, qid = self:GetObjectiveTag("N", nextstep), self:GetObjectiveTag("U", nextstep), self:GetObjectiveTag("O", nextstep), self:GetObjectiveTag("QID", nextstep)
 	local zonename = self:GetObjectiveTag("Z", nextstep) or self.zonename
-	self:DebugF(1, "Progressing to objective \"%s %s\"", action, quest)
+	self:Debug( string.format("Progressing to objective \"%s %s\"", action, quest))
 
 	-- Mapping
 	if (TomTom or Cartographer_Waypoints) and (lastmapped ~= quest or lastmappedaction ~= action) then
@@ -224,7 +213,7 @@ function TourGuide:UpdateStatusFrame()
 		text:SetAlpha(0)
 		elapsed = 0
 		f2:SetWidth(f:GetWidth())
-		f2anchor = select(3, GetQuadrant(f))
+		f2anchor = self.select(3, self.GetQuadrant(f))
 		f2:ClearAllPoints()
 		f2:SetPoint(f2anchor, f, f2anchor, 0, 0)
 		f2:SetAlpha(1)
@@ -239,10 +228,10 @@ function TourGuide:UpdateStatusFrame()
 	if not f2:IsVisible() then f:SetWidth(FIXEDWIDTH + text:GetWidth()) end
 	newsize = FIXEDWIDTH + text:GetWidth()
 
-	tex = useitem and select(9, GetItemInfo(tonumber(useitem)))
+	tex = useitem and self.select(9, GetItemInfo(tonumber(useitem)))
 	uitem = useitem
 	item.uitem = tex and uitem or nil
-	if InCombatLockdown() then self:RegisterEvent("PLAYER_REGEN_ENABLED")
+	if UnitAffectingCombat("player") then self:RegisterEvent("PLAYER_REGEN_ENABLED")
 	else self:PLAYER_REGEN_ENABLED() end
 
 	self:UpdateOHPanel()
@@ -252,13 +241,12 @@ end
 function TourGuide:PLAYER_REGEN_ENABLED()
 	if tex then
 		itemicon:SetTexture(tex)
-		-- SetAttribute applies only to SecureFrames, not in Vanilla yet...
-		--item:SetAttribute("type1", "item")
-		--item:SetAttribute("item1", "item:"..uitem)
 		item:Show()
 		tex = nil
 	else item:Hide() end
-	self:UnregisterEvent("PLAYER_REGEN_ENABLED")
+	if self:IsEventRegistered("PLAYER_REGEN_ENABLED") then
+		self:UnregisterEvent("PLAYER_REGEN_ENABLED")
+	end
 end
 
 
@@ -271,16 +259,21 @@ f:SetScript("OnClick", function()
 			if TourGuide.objectiveframe:IsVisible() then
 				HideUIPanel(TourGuide.objectiveframe)
 			else
-				local quad, vhalf, hhalf = GetQuadrant(self)
+				local quad, vhalf, hhalf = TourGuide.GetQuadrant(self)
 				local anchpoint = (vhalf == "TOP" and "BOTTOM" or "TOP")..hhalf
 				TourGuide.objectiveframe:ClearAllPoints()
 				TourGuide.objectiveframe:SetPoint(quad, self, anchpoint)
 				ShowUIPanel(TourGuide.objectiveframe)
 			end
 		else
-			local i = TourGuide:GetQuestLogIndexByName()
-			if i then SelectQuestLogEntry(i) end
-			ShowUIPanel(QuestLogFrame)
+			if QuestLogFrame:IsVisible() or (EQL3_QuestLogFrame and EQL3_QuestLogFrame:IsVisible()) then
+				HideUIPanel(QuestLogFrame)
+				HideUIPanel(EQL3_QuestLogFrame)
+			else
+				local i = TourGuide:GetQuestLogIndexByName()
+				if i then SelectQuestLogEntry(i) end
+				ShowUIPanel(QuestLogFrame)
+			end
 		end
 	end
 end)
@@ -291,53 +284,50 @@ check:SetScript("OnClick", function(self, btn) TourGuide:SetTurnedIn() end)
 
 item:SetScript("OnClick", function()
 	if TourGuide:GetObjectiveInfo() == "USE" then TourGuide:SetTurnedIn() end
-	if item.uitem then UseContainerItem(TourGuide:FindBagSlot(item.uitem)) end
+	if item.uitem then
+		local bag, slot = TourGuide:FindBagSlot(item.uitem)
+		if bag and slot then UseContainerItem(bag, slot) else TourGuide:Print("Item not found") end
+	end
 end)
 
 
 local function ShowTooltip()
 	local self = this
 	local tip = TourGuide:GetObjectiveTag("N")
-	if not tip then return end
-
- 	GameTooltip:SetOwner(self, "ANCHOR_NONE")
-	local quad, vhalf, hhalf = GetQuadrant(self)
-	local anchpoint = (vhalf == "TOP" and "BOTTOM" or "TOP")..hhalf
-	TourGuide:Debug(11, "Setting tooltip anchor", anchpoint, quad, hhalf, vhalf)
-	GameTooltip:SetPoint(quad, self, anchpoint)
-	GameTooltip:SetText(tip, nil, nil, nil, nil, true)
+	if not tip or tip == "" then return end
+	tip = tostring(tip)
+	local quad, vhalf, hhalf = TourGuide.GetQuadrant(self)
+	--local anchpoint = (vhalf == "TOP" and "BOTTOM" or "TOP")..hhalf
+	local anchpoint = "ANCHOR_TOP"..hhalf
+	TourGuide:Debug( "Setting tooltip anchor", anchpoint)
+	GameTooltip:SetOwner(self, anchpoint)
+	GameTooltip:SetText(tip,nil,nil,nil,nil,1)
+	GameTooltip:Show()
 end
 
+local function HideTooltip()
+ 	if GameTooltip:IsOwned(this) then
+ 		GameTooltip:Hide()
+ 	end
+end
 
-f:SetScript("OnLeave", function() GameTooltip:Hide() end)
+f:SetScript("OnLeave", HideTooltip)
 f:SetScript("OnEnter", ShowTooltip)
-
-
-local function GetUIParentAnchor(frame)
-	local w, h, x, y = UIParent:GetWidth(), UIParent:GetHeight(), frame:GetCenter()
-	local hhalf, vhalf = (x > w/2) and "RIGHT" or "LEFT", (y > h/2) and "TOP" or "BOTTOM"
-	local dx = hhalf == "RIGHT" and math.floor(frame:GetRight() + 0.5) - w or math.floor(frame:GetLeft() + 0.5)
-	local dy = vhalf == "TOP" and math.floor(frame:GetTop() + 0.5) - h or math.floor(frame:GetBottom() + 0.5)
-	return vhalf..hhalf, dx, dy
-end
-
 
 f:RegisterForDrag("LeftButton")
 f:SetMovable(true)
 f:SetClampedToScreen(true)
 f:SetScript("OnDragStart", function()
 	local frame = this
-	if TourGuide.objectiveframe:IsVisible() then HideUIPanel(TourGuide.objectiveframe) end
+	TourGuide:HideStatusFrameChildren()
 	GameTooltip:Hide()
 	frame:StartMoving()
 end)
 f:SetScript("OnDragStop", function()
 	local frame = this
 	frame:StopMovingOrSizing()
-	TourGuide:Debug(1, "Status frame moved", GetUIParentAnchor(frame))
 	local _
 	TourGuide.db.profile.statusframepoint, _, _, TourGuide.db.profile.statusframex, TourGuide.db.profile.statusframey = frame:GetPoint()
-	--TourGuide.db.profile.statusframepoint, TourGuide.db.profile.statusframex, TourGuide.db.profile.statusframey = GetUIParentAnchor(frame)
 	frame:ClearAllPoints()
 	frame:SetPoint(TourGuide.db.profile.statusframepoint, TourGuide.db.profile.statusframex, TourGuide.db.profile.statusframey)
 	ShowTooltip(frame)
@@ -351,8 +341,10 @@ item:SetScript("OnDragStart", function() local frame = this frame:StartMoving() 
 item:SetScript("OnDragStop", function()
 	local frame = this
 	frame:StopMovingOrSizing()
-	TourGuide:Debug(1, "Item frame moved", GetUIParentAnchor(frame))
 	local _
 	TourGuide.db.profile.itemframepoint, _, _, TourGuide.db.profile.itemframex, TourGuide.db.profile.itemframey = frame:GetPoint()
-	--TourGuide.db.profile.itemframepoint, TourGuide.db.profile.itemframex, TourGuide.db.profile.itemframey = GetUIParentAnchor(frame)
+end)
+
+f:SetScript("OnHide", function()
+	TourGuide:HideStatusFrameChildren()
 end)

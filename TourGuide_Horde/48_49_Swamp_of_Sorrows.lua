@@ -1,36 +1,50 @@
-TourGuide:RegisterGuide("Swamp of Sorrows (48-49)", "Tanaris (49-50)", "Horde", function()
+TourGuide:RegisterGuide("Swamp of Sorrows (48-49)", "Feralas (49)", "Horde", function()
 return [[
-F Stonard |N|Swamp of Sorrows| |NORAF|
-A Fall From Grace |QID|2784| |NODEBUG| |NORAF|
-T Fall From Grace |QID|2784| |NODEBUG| |NORAF|
-A The Disgraced One |N|Talk to Fallen Hero of the Horde (34,66) until he gives you the quest| |QID|2621| |NORAF|
-T Cortello's Riddle (Part 1) |N|Under the bridge (22,48)| |QID|624| |NORAF|
-A Cortello's Riddle (Part 2) |QID|625| |NORAF|
+F Stonard |N|Swamp of Sorrows|
+A Fall From Grace |QID|2784| |NODEBUG|
+T Fall From Grace |QID|2784| |NODEBUG|
+A The Disgraced One |N|Talk to Fallen Hero of the Horde (34,66) until he gives you the quest| |QID|2621|
+T Cortello's Riddle (Part 1) |N|Under the bridge (22,48)| |QID|624|
+A Cortello's Riddle (Part 2) |QID|625|
+T Nothing But the Truth (Part 2) |QID|1383|
+A Nothing But the Truth (Part 3) |QID|1388|
+T Nothing But the Truth (Part 3) |QID|1388|
+A Nothing But the Turth (Part 4) |QID|1391|
 
-T The Disgraced One |N|Back at Stonard| |QID|2621| |NORAF|
-A The Missing Orders |QID|2622| |NORAF|
-T The Missing Orders |N|At the Inn| |QID|2622| |NORAF|
-A The Swamp Talker |QID|2623| |NORAF|
+H Stonard
+T Nothing But the Truth (Part 4) |T| |QID|1391|
+T The Disgraced One |T| |N|Back at Stonard| |QID|2621|
+A The Missing Orders |T| |QID|2622|
+T Return to Fel'Zerul |T| |S| |N|Skip the follow-up| |QID|1444|
+T The Missing Orders |T| |N|At the Inn| |QID|2622|
+A The Swamp Talker |T| |QID|2623|
 
-C The Swamp Talker |N|At the cave at (65,78)| |QID|2623| |NORAF|
-K Jarquia |N|At around (94,50) or (92,65)| |NORAF|
+A Continued Threat |QID|1428|
+C Continued Threat |N|At the cave at (65,78)| |QID|1428|
+C The Swamp Talker |QID|2623|
 
-T The Swamp Talker |N|At Fallen Hero of the horde (34,66)| |QID|2623| |NORAF|
-A A Tale of Sorrow |N|Talk to him| |QID|2801| |NORAF|
-T A Tale of Sorrow |N|talk talk| |QID|2801| |NORAF|
+T Continued Threat |QID|1428|
+K Jarquia |N|At around (94,50) or (92,65)| |L|11723|
+D Die
 
-H The Salty Sailor Tavern |N|Booty Bay| |NORAF|
-F Brackenwall Village |N|Boat to Ratchet and fly down| |NORAF|
-A The Brood of Onyxia |T| |QID|1172| |NORAF|
+T The Swamp Talker |N|Back in Stonard at Fallen Hero of the horde (34,66)| |QID|2623|
+A A Tale of Sorrow |N|Talk to him| |QID|2801|
+T A Tale of Sorrow |N|talk talk, skip the follow-up| |QID|2801|
 
-N Get Overdue Package |N|From the zeppelin crash (54,55) for "Ledger from Tanaris"| |Z|Dustwallow Marsh| |L|11724| |NORAF|
-C The Brood of Onyxia |N|Eggs at (53,72) and (48,75)| |Z|Dustwallow Marsh| |QID|1172| |NORAF|
-T Cortello's Riddle (Part 2) |N|West to Bloodfen Cave (31,67)| |Z|Dustwallow Marsh| |QID|625| |NORAF|
-A Cortello's Riddle (Part 3) |QID|626| |NORAF|
+F Booty Bay
+A Whiskey Slim's Lost Grog |T| |QID|580|
 
-T The Brood of Onyxia |N|Back at Brackenwall Village| |T| |QID|1172| |NORAF|
-A Challenge Overlord Mok'Morokk |T| |QID|1173| |NORAF|
-C Challenge Overlord Mok'Morokk |N|Elite 45| |T| |QID|1173| |NORAF|
-T Challenge Overlord Mok'Morokk |T| |QID|1173| |NORAF|
+F Brackenwall Village |T| |N|Boat to Ratchet and fly down|
+A The Brood of Onyxia |T| |QID|1172|
+
+N Get Overdue Package |N|From the zeppelin crash (54,55) for "Ledger from Tanaris"| |Z|Dustwallow Marsh| |L|11724|
+C The Brood of Onyxia |N|Eggs at (53,72) and (48,75)| |Z|Dustwallow Marsh| |QID|1172|
+T Cortello's Riddle (Part 2) |N|West to Bloodfen Cave (31,67)| |Z|Dustwallow Marsh| |QID|625|
+A Cortello's Riddle (Part 3) |QID|626|
+
+T The Brood of Onyxia |N|Back at Brackenwall Village| |T| |QID|1172|
+A Challenge Overlord Mok'Morokk |T| |QID|1173|
+C Challenge Overlord Mok'Morokk |N|Elite 45| |T| |QID|1173|
+T Challenge Overlord Mok'Morokk |T| |QID|1173|
 ]]
 end)

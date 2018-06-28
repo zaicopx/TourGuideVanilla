@@ -11,14 +11,14 @@ A Hungry! |QID|1177|
 
 C Theramore Spies |N|Stealthed mobs all around Brackenwall Village| |QID|1201|
 C The Black Shield (Part 3) |QID|1322|
-C Hungry! |QID|1177|  |N|North of the house, along the coast.|
+C Hungry! |QID|1177| |N|North of the house, along the coast.|
 
 A Soothing Spices |QID|1218|
 T Soothing Spices |QID|1218|
 A Jarl Needs Eyes |QID|1206|
 A The Lost Report |QID|1238| |N|Click on Loose Dirt|
 
-A Stinky's Escape |QID|1270| |N|North of the tower (46.87, 17.62).  You may want to clear the area first.|
+A Stinky's Escape |QID|1270| |N|North of the tower (46.87, 17.62). You may want to clear the area first.|
 C Stinky's Escape |QID|1270|
 
 C Jarl Needs Eyes |N|Kill spiders to the southwest at Darkmist Cavern (35,21).| |QID|1206|
@@ -34,7 +34,7 @@ T Jarl Needs Eyes |QID|1206|
 A The Severed Head |QID|1239| |N|Dig in the dirt near the cabin again.|
 
 C The Theramore Docks |QID|1202| |N|Swim around the north side of Theramore, find the box under the northeast pier (71.50, 51.10).|
-N Die on Purpose |N|Back to Brackenwall Village|
+D Die |N|Take Rez Sickness back to Brackenwall Village|
 T The Theramore Docks |T| |QID|1202|
 T The Severed Head |T| |QID|1239|
 A The Troll Witchdoctor |T| |QID|1240|
