@@ -18,7 +18,7 @@ A A Good Friend |QID|4495|
 T The Woodland Protector (Part 1) |N|Dryad to the southwest (57.77, 45.20)| |QID|458|
 A The Woodland Protector (Part 2) |QID|459|
 C The Woodland Protector (Part 2) |QID|459|
-T The Woodland Protector (Part 2) |QID|459|
+T The Woodland Protector (Part 2) |N|Should hit level 3| |QID|459|
 A Webwood Venom |N|At the base of the ramp (57.79, 41.70)| |QID|916|
 
 T Encrypted Sigil |C|Rogue| |QID|3118| |R|Night Elf|
