@@ -25,6 +25,9 @@ A Webwood Venom |N|At the base of the ramp (57.79, 41.70)| |QID|916|
 T A Good Friend |N|Kill boars and spiders along the way| |QID|4495|
 A A Friend in Need |QID|3519|
 T A Friend in Need |N|Kill boars and spiders along the way| |QID|3519|
+A Iverron's Antidote (Part 1) |QID|3521|
+
+C The Balance of Nature (Part 2) |N|Should hit level 4| |QID|457|
 
 T Encrypted Sigil |C|Rogue| |QID|3118| |R|Night Elf|
 T Etched Sigil |C|Hunter| |N|Up the ramp!| |QID|3117| |R|Night Elf|
@@ -32,13 +35,11 @@ T Hallowed Sigil |C|Priest| |QID|3119| |R|Night Elf|
 T Simple Sigil |C|Warrior| |QID|3116| |R|Night Elf|
 T Verdant Sigil |C|Druid| |N|Up the ramp!| |QID|3120| |R|Night Elf|
 
-C The Balance of Nature (Part 2) |N|Mobs are to the northeast (60,35)| |QID|457|
 C Webwood Venom |N|To the northwest at Shadowthread Cave (57,33)| |QID|916|
 T Webwood Venom |QID|916|
 A Webwood Egg |QID|917|
 
 T The Balance of Nature (Part 2) |QID|457|
-A Iverron's Antidote (Part 1) |QID|3521|
 
 C Iverron's Antidote (Part 1) |N|Lilies around the pond, mushrooms at the bases of trees, ichor from the spiders| |QID|3521|
 C Webwood Egg |N|Inside the cave (56,26)| |QID|917|
