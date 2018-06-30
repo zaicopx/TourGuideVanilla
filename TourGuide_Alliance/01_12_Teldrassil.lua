@@ -35,6 +35,7 @@ T Etched Sigil |C|Hunter| |N|Up the ramp!| |QID|3117| |R|Night Elf|
 T Hallowed Sigil |C|Priest| |QID|3119| |R|Night Elf|
 T Simple Sigil |C|Warrior| |QID|3116| |R|Night Elf|
 T Verdant Sigil |C|Druid| |N|Up the ramp!| |QID|3120| |R|Night Elf|
+B Train skills |N|No need to take Beast Tracking for now|
 
 C Webwood Venom |N|To the northwest at Shadowthread Cave (57,33)| |QID|916|
 T Webwood Venom |QID|916|
