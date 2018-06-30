@@ -11,6 +11,8 @@ A Hallowed Sigil |C|Priest| |QID|3119| |R|Night Elf|
 A Simple Sigil |C|Warrior| |QID|3116| |R|Night Elf|
 A Verdant Sigil |C|Druid| |QID|3120| |R|Night Elf|
 
+B Sell junk/repair and buy arrows
+
 A The Woodland Protector (Part 1) |QID|458|
 A A Good Friend |QID|4495|
 T The Woodland Protector (Part 1) |N|Dryad to the southwest (57.77, 45.20)| |QID|458|
