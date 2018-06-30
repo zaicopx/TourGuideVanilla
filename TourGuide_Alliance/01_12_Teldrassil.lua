@@ -37,13 +37,13 @@ T Simple Sigil |C|Warrior| |QID|3116| |R|Night Elf|
 T Verdant Sigil |C|Druid| |N|Up the ramp!| |QID|3120| |R|Night Elf|
 B Train skills |N|No need to take Beast Tracking for now|
 
+C Iverron's Antidote (Part 1) |N|Lilies around the pond, mushrooms at the bases of trees, ichor from the spiders| |QID|3521|
 C Webwood Venom |N|To the northwest at Shadowthread Cave (57,33)| |QID|916|
 T Webwood Venom |QID|916|
 A Webwood Egg |QID|917|
 
 T The Balance of Nature (Part 2) |QID|457|
 
-C Iverron's Antidote (Part 1) |N|Lilies around the pond, mushrooms at the bases of trees, ichor from the spiders| |QID|3521|
 C Webwood Egg |N|Inside the cave (56,26)| |QID|917|
 T Webwood Egg |QID|917|
 A Tenaron's Summons |QID|920|
