@@ -24,6 +24,7 @@ A Webwood Venom |N|At the base of the ramp (57.79, 41.70)| |QID|916|
 
 T A Good Friend |N|Kill boars and spiders along the way| |QID|4495|
 A A Friend in Need |QID|3519|
+T A Friend in Need |N|Kill boars and spiders along the way| |QID|3519|
 
 T Encrypted Sigil |C|Rogue| |QID|3118| |R|Night Elf|
 T Etched Sigil |C|Hunter| |N|Up the ramp!| |QID|3117| |R|Night Elf|
@@ -37,7 +38,6 @@ T Webwood Venom |QID|916|
 A Webwood Egg |QID|917|
 
 T The Balance of Nature (Part 2) |QID|457|
-T A Friend in Need |QID|3519|
 A Iverron's Antidote (Part 1) |QID|3521|
 
 C Iverron's Antidote (Part 1) |N|Lilies around the pond, mushrooms at the bases of trees, ichor from the spiders| |QID|3521|
