@@ -47,16 +47,21 @@ T Iverron's Antidote (Part 1) |N|Should hit level 5| |QID|3521|
 A Iverron's Antidote (Part 2) |QID|3522|
 B Sell junk/repair and buy Hornwood Recurve Bow
 
+T Iverron's Antidote (Part 2) |QID|3522|
 C Webwood Egg |N|Inside the cave (56,26)| |QID|917|
+D Die and rez at spirit healer
+
 T Webwood Egg |QID|917|
 A Tenaron's Summons |QID|920|
+B Sell junk/repair and buy arrows if necessary
+
 T Tenaron's Summons |N|Up the ramp| |QID|920|
 A Crown of the Earth (Part 1) |QID|921|
 C Crown of the Earth (Part 1) |N|Moonwell north of Aldrassil (59.93, 33.07)| |U|5185| |QID|921|
-T Iverron's Antidote (Part 2) |QID|3522|
-T Crown of the Earth (Part 1) |QID|921|
+T Crown of the Earth (Part 1) |N|Should hit level 6| |QID|921|
 A Crown of the Earth (Part 2) |QID|928|
 
+B train skills
 A Dolanaar Delivery |N|South out of Shadowglen (61,47)| |QID|2159|
 A Zenn's Bidding |N|Along the road to Dolannar (60,56)| |QID|488|
 
