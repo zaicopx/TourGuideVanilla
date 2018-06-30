@@ -43,14 +43,15 @@ T Webwood Venom |QID|916|
 A Webwood Egg |QID|917|
 
 T The Balance of Nature (Part 2) |QID|457|
+T Iverron's Antidote (Part 1) |N|Should hit level 5| |QID|3521|
+A Iverron's Antidote (Part 2) |QID|3522|
+B Sell junk/repair and buy Hornwood Recurve Bow
 
 C Webwood Egg |N|Inside the cave (56,26)| |QID|917|
 T Webwood Egg |QID|917|
 A Tenaron's Summons |QID|920|
 T Tenaron's Summons |N|Up the ramp| |QID|920|
 A Crown of the Earth (Part 1) |QID|921|
-T Iverron's Antidote (Part 1) |QID|3521|
-A Iverron's Antidote (Part 2) |QID|3522|
 C Crown of the Earth (Part 1) |N|Moonwell north of Aldrassil (59.93, 33.07)| |U|5185| |QID|921|
 T Iverron's Antidote (Part 2) |QID|3522|
 T Crown of the Earth (Part 1) |QID|921|
