@@ -28,6 +28,7 @@ T A Friend in Need |N|Kill boars and spiders along the way| |QID|3519|
 A Iverron's Antidote (Part 1) |QID|3521|
 
 C The Balance of Nature (Part 2) |N|Should hit level 4| |QID|457|
+B Sell junk/repair and buy arrows
 
 T Encrypted Sigil |C|Rogue| |QID|3118| |R|Night Elf|
 T Etched Sigil |C|Hunter| |N|Up the ramp!| |QID|3117| |R|Night Elf|
