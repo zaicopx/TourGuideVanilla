@@ -73,7 +73,6 @@ A Crown of the Earth (Part 3) |QID|929|
 A Denalan's Earth |N|In front of the tower| |QID|997|
 A A Troubling Breeze |N|In the tower| |QID|475|
 A The Emerald Dreamcatcher |N|In the tower| |QID|2438|
-A Twisted Hatred |N|In the tower| |QID|932|
 
 C Zenn's Bidding |N|East of Dolanaar| |QID|488|
 C Crown of the Earth (Part 3) |N|Moonwell is East of Dolanaar (63.37, 58.12)| |U|5619| |QID|929|
@@ -104,9 +103,7 @@ C Seek Redemption! |QID|489|
 T Seek Redemption! |N|East at Zenn Foulhoof| |QID|489|
 C Ferocitas the Dream Eater |N|North of Starbreeze. Kill Ferocitas (69.37, 53.41) and open the necklace he drops for the jewel.| |U|8049| |QID|2459|
 
-C Twisted Hatred |N|North of Dolanaar (51.23, 50.79). You can also wait until you're 10 to do this.| |QID|932|
 T Ferocitas the Dream Eater |QID|2459|
-T Twisted Hatred |QID|932|
 
 A The Road to Darnassus |N|From a mounted patrol on the road west of town| |QID|487|
 C The Road to Darnassus |N|Outside of Ban'ethil Hollow (46,52), south of the road where the NPC partrols.| |QID|487|
