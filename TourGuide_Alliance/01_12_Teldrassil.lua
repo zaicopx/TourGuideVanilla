@@ -95,7 +95,6 @@ T Timberling Sprouts |QID|919|
 T Crown of the Earth (Part 3) |N|Back in Dolanaar| |QID|929|
 A Crown of the Earth (Part 4) |QID|933|
 T Gnarlpine Corruption |N|In the tower| |QID|476|
-A The Relics of Wakening |QID|483|
 T The Emerald Dreamcatcher |QID|2438|
 A Ferocitas the Dream Eater |QID|2459|
 
@@ -108,23 +107,10 @@ T Ferocitas the Dream Eater |QID|2459|
 A The Road to Darnassus |N|From a mounted patrol on the road west of town| |QID|487|
 C The Road to Darnassus |N|Outside of Ban'ethil Hollow (46,52), south of the road where the NPC partrols.| |QID|487|
 
-N Rune of Nesting |N|Head down into the Ban'ethil Barrow Den (44.41, 57.87). At the first set of bridges take the left bridge (44.40, 60.67).| |QID|483| |QO|Rune of Nesting: 1/1|
-N Black Feather Quill |N|Across the other bridge (43.70, 61.22).| |QID|483| |QO|Black Feather Quill: 1/1|
-A The Sleeping Druid |N|Jump down and take the passage to the west, run across the bridge to Oben Rageclaw (44.94, 61,60).| |QID|2541|
-N Sapphire of Sky |N|Jump down and go south (44.70, 62.44).| |QID|483| |QO|Sapphire of Sky: 1/1|
-C The Relics of Wakening |N|The Raven Claw Talisman is north in the next room (the one with Rageclaw's body). Run up onto the center pilar, take the bridge to the right and follow the path around to the left (45.65, 57.44).| |QID|483|
-C The Sleeping Druid |N|If the item didn't drop while you are collecting the relics, skip this and "Druid of the Claw"| |QID|2541|
-T The Sleeping Druid |QID|2541|
-A Druid of the Claw |QID|2561|
-C Druid of the Claw |N|Back in the room to the north. Kill him, target his body and use the charm.| |U|8149| |QID|2561|
-T Druid of the Claw |QID|2561|
-
 C Crown of the Earth (Part 4) |N|Moonwell at the Pools of Arlithrien (42.42, 67.08)| |U|5621| |QID|933|
 
 T Crown of the Earth (Part 4) |N|Back at Dolanaar, you can die and spirit rez. Down by the moonwell.| |QID|933|
 A Crown of the Earth (Part 5) |QID|7383|
-T The Relics of Wakening |QID|483|
-A Ursal the Mauler |QID|486|
 T The Road to Darnassus |QID|487|
 
 A Taming the Beast (Part 1) |C|Hunter| |QID|6063| |R|Night Elf|
@@ -167,21 +153,16 @@ A Tears of the Moon |QID|2518|
 A Nessa Shadowsong |N|From Mydrannul (70.67, 45.37) on your way out of Darnassus.| |R|Night Elf| |Z|Darnassus| |QID|6344|
 
 A The Glowing Fruit |N|Out of town, south of the Pools of Arlithrien, just outside Gnarlpine Hold (42.61, 76.11)| |QID|930|
-C Ursal the Mauler |N|West of the glowing tree (39,80)| |QID|486|
 
-C Tumors |N|Elementals at the river east of The Oracle Glade (42,42)| |QID|923|
 C Crown of the Earth (Part 5) |N|Moonwell at The Oracle Glade (38.44, 34.08)| |U|18152| |QID|7383|
 A The Enchanted Glade |QID|937|
 
-A Mist |N|Find the saber to the west, past the harpies (31.5, 31.6)| |QID|938|
-A The Shimmering Frond |N|Slightly northeast of where you found Mist (34.7, 28.8)| |QID|931|
+A The Shimmering Frond |N|Slightly northwest of the moonwell (34.7, 28.8)| |QID|931|
 C The Enchanted Glade |QID|937|
-C Mist |N|Lead the cat back to the moonwell at the Oracle Glade (38.29, 34.34).| |QID|938|
-
-T Mist |QID|938|
 T The Enchanted Glade |QID|937|
 A Teldrassil |QID|940|
 
+C Tumors |N|Elementals at the river east of The Oracle Glade (42,42)| |QID|923|
 C Tears of the Moon |N|North-northeast, near the edge of the tree. Spawns in a few different spots (39,25) (41,25) (47,25)| |QID|2518|
 
 T Tumors |N|Back in Cenarion Enclave, Darnassus| |QID|923|
@@ -192,19 +173,12 @@ C Sathrah's Sacrifice |N|Use the item down in the fountain| |U|8155| |QID|2520|
 T Sathrah's Sacrifice |QID|2520|
 
 H Dolanaar
-T Ursal the Mauler |QID|486|
 T Crown of the Earth (Part 5) |N|Down by the moonwell again| |QID|7383|
 A Crown of the Earth (Part 6) |QID|935|
 
 T Return to Denalan |N|South at the lake (60.90, 68.49)| |QID|2498|
-A Oakenscowl |QID|2499|
 T The Glowing Fruit |QID|930|
 T The Shimmering Frond |QID|931|
-A The Moss-twined Heart |O| |U|927| |QID|927|
-T The Moss-twined Heart |O| |QID|927|
-
-C Oakenscowl |N|Go along the river to the west until you find the cave (53.75, 75.10)| |QID|2499|
-T Oakenscowl |QID|2499|
 
 T Crown of the Earth (Part 6) |N|Turn it at Cenarion Enclave, Darnassus, at the top of the tower| |QID|935|
 T Teldrassil |QID|940|
