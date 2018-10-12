@@ -21,11 +21,14 @@ B Sell junk/repair and buy arrows
 A A Good Friend |QID|4495|
 
 C The Balance of Nature (Part 2) |N|Head northeast around Aldrassil and start killing all the cats and boars in sight as you move toward Iverron. Should hit level 4| |QID|457|
-T A Good Friend |N|Kill boars and spiders along the way| |QID|4495|
+T A Good Friend |N|Kill boars, cats, and spiders along the way| |QID|4495|
 A A Friend in Need |QID|3519|
-T A Friend in Need |N|Kill boars and spiders along the way| |QID|3519|
+C Webwood Venom |N|East of Iverron at Shadowthread Cave (57,33)| |QID|916|
+T Webwood Venom |QID|916|
+A Webwood Egg |QID|917|
+T The Balance of Nature (Part 2) |QID|457|
+T A Friend in Need |QID|3519|
 A Iverron's Antidote (Part 1) |QID|3521|
-
 
 B Sell junk/repair and buy arrows
 
@@ -37,11 +40,7 @@ T Verdant Sigil |C|Druid| |N|Up the ramp!| |QID|3120| |R|Night Elf|
 B Train skills |N|No need to take Beast Tracking for now|
 
 C Iverron's Antidote (Part 1) |N|Lilies around the pond, mushrooms at the bases of trees, ichor from the spiders| |QID|3521|
-C Webwood Venom |N|To the northwest at Shadowthread Cave (57,33)| |QID|916|
-T Webwood Venom |QID|916|
-A Webwood Egg |QID|917|
 
-T The Balance of Nature (Part 2) |QID|457|
 T Iverron's Antidote (Part 1) |N|Should hit level 5| |QID|3521|
 A Iverron's Antidote (Part 2) |QID|3522|
 B Sell junk/repair and buy Hornwood Recurve Bow
