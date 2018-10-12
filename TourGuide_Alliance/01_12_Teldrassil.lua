@@ -24,6 +24,7 @@ C The Balance of Nature (Part 2) |N|Head northeast around Aldrassil and start ki
 T A Good Friend |N|Kill boars, cats, and spiders along the way| |QID|4495|
 A A Friend in Need |QID|3519|
 C Webwood Venom |N|East of Iverron at Shadowthread Cave (57,33)| |QID|916|
+H Hearth back to start
 T Webwood Venom |QID|916|
 A Webwood Egg |QID|917|
 T The Balance of Nature (Part 2) |QID|457|
@@ -39,22 +40,20 @@ T Simple Sigil |C|Warrior| |QID|3116| |R|Night Elf|
 T Verdant Sigil |C|Druid| |N|Up the ramp!| |QID|3120| |R|Night Elf|
 B Train skills |N|No need to take Beast Tracking for now|
 
-C Iverron's Antidote (Part 1) |N|Lilies around the pond, mushrooms at the bases of trees, ichor from the spiders| |QID|3521|
+C Iverron's Antidote (Part 1) |N|Lilies around the pond, mushrooms from the Grellkin to the west, ichor from the spiders| |QID|3521|
+C Webwood Egg |N|Inside the cave (56,26)| |QID|917|
+D Die and rez at spirit healer
 
 T Iverron's Antidote (Part 1) |N|Should hit level 5| |QID|3521|
 A Iverron's Antidote (Part 2) |QID|3522|
 B Sell junk/repair and buy Hornwood Recurve Bow
-
-T Iverron's Antidote (Part 2) |QID|3522|
-C Webwood Egg |N|Inside the cave (56,26)| |QID|917|
-D Die and rez at spirit healer
-
 T Webwood Egg |QID|917|
 A Tenaron's Summons |QID|920|
-B Sell junk/repair and buy arrows if necessary
-
 T Tenaron's Summons |N|Up the ramp| |QID|920|
 A Crown of the Earth (Part 1) |QID|921|
+
+T Iverron's Antidote (Part 2) |QID|3522|
+
 C Crown of the Earth (Part 1) |N|Moonwell north of Aldrassil (59.93, 33.07)| |U|5185| |QID|921|
 T Crown of the Earth (Part 1) |N|Should hit level 6| |QID|921|
 A Crown of the Earth (Part 2) |QID|928|
