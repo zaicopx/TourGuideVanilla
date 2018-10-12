@@ -1,6 +1,7 @@
 TourGuide:RegisterGuide("Teldrassil (1-12)", "Darkshore (12-17)", "Alliance", function()
 return [[
 A The Balance of Nature (Part 1) |QID|456|
+A The Woodland Protector (Part 1) |N|Start killing boars and cats for The Balance of Nature on the way to accept this quest| |QID|458|
 C The Balance of Nature (Part 1) |N|Should hit level 2| |QID|456|
 T The Balance of Nature (Part 1) |QID|456|
 A The Balance of Nature (Part 2) |QID|457|
@@ -11,23 +12,21 @@ A Hallowed Sigil |C|Priest| |QID|3119| |R|Night Elf|
 A Simple Sigil |C|Warrior| |QID|3116| |R|Night Elf|
 A Verdant Sigil |C|Druid| |QID|3120| |R|Night Elf|
 
-B Sell junk/repair and buy arrows
-
-A The Woodland Protector (Part 1) |QID|458|
-A A Good Friend |QID|4495|
 T The Woodland Protector (Part 1) |N|Dryad to the southwest (57.77, 45.20)| |QID|458|
 A The Woodland Protector (Part 2) |QID|459|
 C The Woodland Protector (Part 2) |QID|459|
 T The Woodland Protector (Part 2) |N|Should hit level 3| |QID|459|
-B Sell junk/repair and buy arrows
 A Webwood Venom |N|At the base of the ramp (57.79, 41.70)| |QID|916|
+B Sell junk/repair and buy arrows
+A A Good Friend |QID|4495|
 
+C The Balance of Nature (Part 2) |N|Head northeast around Aldrassil and start killing all the cats and boars in sight as you move toward Iverron. Should hit level 4| |QID|457|
 T A Good Friend |N|Kill boars and spiders along the way| |QID|4495|
 A A Friend in Need |QID|3519|
 T A Friend in Need |N|Kill boars and spiders along the way| |QID|3519|
 A Iverron's Antidote (Part 1) |QID|3521|
 
-C The Balance of Nature (Part 2) |N|Should hit level 4| |QID|457|
+
 B Sell junk/repair and buy arrows
 
 T Encrypted Sigil |C|Rogue| |QID|3118| |R|Night Elf|
