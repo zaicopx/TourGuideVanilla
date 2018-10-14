@@ -67,6 +67,7 @@ h Dolanaar
 T Dolanaar Delivery |QID|2159|
 T Crown of the Earth (Part 2) |N|South of the inn by the moonwell| |QID|928|
 A Crown of the Earth (Part 3) |QID|929|
+A Recipe of the Kaldorei |N|Need 1 silver to train cooking first| |QID|4161|
 A Denalan's Earth |N|In front of the tower| |QID|997|
 A A Troubling Breeze |N|In the tower| |QID|475|
 A The Emerald Dreamcatcher |N|In the tower| |QID|2438|
