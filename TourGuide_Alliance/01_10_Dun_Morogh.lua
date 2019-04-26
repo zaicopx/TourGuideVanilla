@@ -1,11 +1,10 @@
-TourGuide:RegisterGuide("Dun Morogh (1-11)", "Darkshore (12-17)", "Alliance", function()
+TourGuide:RegisterGuide("Dun Morogh (1-10)", "Loch Modan (10-12)", "Alliance", function()
     return [[
     A Dwarven Outfitters |QID|179|
     A Coldridge Valley Mail Delivery (Part 1) |QID|233|
     K Kill wolves for Dwarven Outfitters on your way to the next questgiver
     
     A Beginnings |C|Warlock| |QID|1599|
-    K Kill wolves for Dwarven Outfitters on your way to the next questgiver
     T Coldridge Valley Mail Delivery (Part 1) |QID|233|
     A Coldridge Valley Mail Delivery (Part 2) |QID|234|
     
