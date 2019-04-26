@@ -130,7 +130,7 @@ function TourGuide:OnEnable() -- PLAYER_LOGIN (2)
 
 	if self.db.char.currentguide == "No Guide" and UnitLevel("player") == 1 and UnitXP("player") == 0 then
 		local startguides = {Orc = "Durotar (1-12)", Troll = "Durotar (1-12)", Tauren = "Mulgore (1-12)", Undead = "Tirisfal Glades (1-12)",
-			Dwarf = "Dun Morogh (1-11)", Gnome = "Dun Morogh (1-11)", Human = "Elwynn Forest (1-12)", NightElf = "Teldrassil (1-12)"}
+			Dwarf = "Dun Morogh (1-10)", Gnome = "Dun Morogh (1-10)", Human = "Elwynn Forest (1-12)", NightElf = "Teldrassil (1-12)"}
 		self.db.char.currentguide = startguides[self.select(2, UnitRace("player"))] or self.guidelist[1]
 	end
 
