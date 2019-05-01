@@ -1,4 +1,4 @@
-TourGuide:RegisterGuide("Teldrassil (1-12)", "Darkshore (12-17)", "Alliance", function()
+TourGuide:RegisterGuide("Teldrassil (1-12)", "Darkshore (12-18)", "Alliance", function()
 return [[
 A The Balance of Nature (Part 1) |QID|456|
 A The Woodland Protector (Part 1) |N|Start killing boars and cats for The Balance of Nature on the way to accept this quest| |QID|458|

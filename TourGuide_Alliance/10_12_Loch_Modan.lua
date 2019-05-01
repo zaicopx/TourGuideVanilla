@@ -1,4 +1,4 @@
-TourGuide:RegisterGuide("Loch Modan (10-12)", "Darkshore (12-17)", "Alliance", function()
+TourGuide:RegisterGuide("Loch Modan (10-12)", "Darkshore (12-18)", "Alliance", function()
 return [[
 A In Defense of the King's Lands (part 1) |QID|224|
 A The Trogg Threat |QID|267|
