@@ -132,9 +132,9 @@ T The Blackwood Corrupted |N|should hit level 16| |QID|4763|
 B sell trash
 A WANTED: Murkdeep! |N|The Wanted poster infront of Inn| |QID|4740|
 
+A Beached Sea Turtle (Part 3) |N|To the southwest on the shore (53.15, 18.13)| |QID|4727|
 A Beached Sea Creature (Part 2) |N|Further south down the shore (36.05, 70.78)| |QID|4728|
 A Beached Sea Creature (Part 3) |N|On the shore northwest of the dig site (32.75, 80.69)| |QID|4730|
-A Beached Sea Turtle (Part 3) |N|To the southwest on the shore (53.15, 18.13)| |QID|4727|
 C Fruit of the Sea |QID|1138| |N|Kill Encrusted Tide Crawlers between here and the river to the west, or Reef Crawlers west of the river. DOES NOT DROP from Raging Reef Crawlers to the north.|
 
 T Onu |N|South at Grove of the Ancients| |QID|948|
