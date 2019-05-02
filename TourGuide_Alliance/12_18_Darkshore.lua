@@ -134,6 +134,7 @@ A WANTED: Murkdeep! |N|The Wanted poster infront of Inn| |QID|4740|
 
 A Beached Sea Turtle (Part 3) |N|To the southwest on the shore (53.15, 18.13)| |QID|4727|
 A Beached Sea Creature (Part 2) |N|Further south down the shore (36.05, 70.78)| |QID|4728|
+C WANTED: Murkdeep! |N|Follow the shore north to the murloc camp (36.56, 76.65). Clear the camp, after that there's 3 waves of murlocs. Murkdeep is in the last wave.| |QID|4740|
 A Beached Sea Creature (Part 3) |N|On the shore northwest of the dig site (32.75, 80.69)| |QID|4730|
 C Fruit of the Sea |QID|1138| |N|Kill Encrusted Tide Crawlers between here and the river to the west, or Reef Crawlers west of the river. DOES NOT DROP from Raging Reef Crawlers to the north.|
 
@@ -151,10 +152,14 @@ C Therylune's Escape |QID|945|
 T The Absent Minded Prospector (Part 1) |N|West from The Twilight Camp at Remtravel's Excavation| |QID|729|
 A The Absent Minded Prospector (Part 2) |N|Pain in the ass escort around the excavation. You might want to just abandon this (and skip the follow-up quests in the upcoming guides).| |QID|731|
 C The Absent Minded Prospector (Part 2) |QID|731|
-C WANTED: Murkdeep! |N|Follow the shore north to the murloc camp (36.56, 76.65). Clear the camp, after that there's 3 waves of murlocs. Murkdeep is in the last wave.| |QID|4740|
 
 T Return to Onu |N|Back at Grove of the Ancients| |QID|950|
 H Auberdine
+T Beached Sea Turtle (Part 3) |QID|4727|
+T Beached Sea Creature (Part 2) |QID|4728|
+T Beached Sea Creature (Part 3) |QID|4730|
+T WANTED: Murkdeep! |QID|4740|
+T Fruit of the Sea |QID|1138|
 b Menethil
 ]]
 end)
