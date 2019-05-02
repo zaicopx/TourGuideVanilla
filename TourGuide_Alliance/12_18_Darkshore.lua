@@ -60,6 +60,8 @@ B sell trash
 N Fill the [Empty Water Tube] in the Moonwell |U|14338| |L|14339|
 
 K grind moonkin and striders until 1 bar from 14
+T As Water Cascades |N|Back at the red crystal (47.32, 48.70)| |QID|4812|
+A The Fragments Within |QID|4813|
 A The Fall of Ameth'Aran |N|Follow the road south to Twilight Vale| |QID|953|
 C For Love Eternal |N|Patrols around near the southern tablet| |QID|963|
 C Bashal'Aran (Part 4) |QID|957| |N|near the southern tablet in a gazebo (42.37, 61.85)|
@@ -130,12 +132,9 @@ T The Blackwood Corrupted |N|should hit level 16| |QID|4763|
 B sell trash
 A WANTED: Murkdeep! |N|The Wanted poster infront of Inn| |QID|4740|
 
-T As Water Cascades |N|Back at the red crystal (47.32, 48.70)| |QID|4812|
-A The Fragments Within |QID|4813|
-
 A Beached Sea Creature (Part 2) |N|Further south down the shore (36.05, 70.78)| |QID|4728|
 A Beached Sea Creature (Part 3) |N|On the shore northwest of the dig site (32.75, 80.69)| |QID|4730|
-A Beached Sea Turtle (Part 3) |N|To the northwest on the shore (53.15, 18.13)| |QID|4727|
+A Beached Sea Turtle (Part 3) |N|To the southwest on the shore (53.15, 18.13)| |QID|4727|
 C Fruit of the Sea |QID|1138| |N|Kill Encrusted Tide Crawlers between here and the river to the west, or Reef Crawlers west of the river. DOES NOT DROP from Raging Reef Crawlers to the north.|
 
 T Onu |N|South at Grove of the Ancients| |QID|948|
