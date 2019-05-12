@@ -91,16 +91,12 @@ D run to the lake and die, spirit rez
 
 T Senir's Observations (Part 2) |QID|420|
 A Frostmane Hold |QID|287|
-T Supplies to Tannok |QID|2160|
 B [Rhapsody Malt] |L|2894|
 B [Thunder Ale] |L|2686|
 B 1 stack of Light Shot
 T Bitter Rivals |N|Give the Thunder Ale to Jarven downstairs, then talk to the barrel.| |QID|310|
-T Beer Basted Boar Ribs |QID|384|
 
 T Return to Bellowfiz |N|Northeast of Kharanos. Choose the staff| |QID|320|
-T The Grizzled Den |N|At Steelgrill's Depot, east of Kharanos.| |QID|313|
-T Tools for Steelgrill |QID|400|
 
 A Operation Recombobulation |N|In a house a bit northwest of the inn (45.8, 49.4)| |QID|412|
 C The Perfect Stout |N|Northwest in the hills named Shimmer Ridge| |QID|315|
@@ -109,6 +105,7 @@ R Brewnall Village |N|Go northwest, near the frozen lake (30.3, 46.3)| |QID|310|
 T The Perfect Stout |QID|315|
 A Shimmer Stout |QID|413|
 B sell trash
+G grind mobs until level 9
 
 C Operation Recombobulation |N|The green leper gnomes near the moving cog objects.| |QID|412|
 C Frostmane Hold |N|Go southwest, into the back of the cave to complete (21,51)| |QID|287|
@@ -117,10 +114,15 @@ H to Kharanos
 
 T Frostmane Hold |N|Choose the shield| |QID|287|
 A The Reports |QID|291|
+T Beer Basted Boar Ribs |QID|384|
+T Supplies to Tannok |QID|2160|
 B 1 stack of Light Shot
 T Operation Recombobulation |N|Choose the cloak. Should hit level 9| |QID|412|
 
-R Amberstill Ranch
+T The Grizzled Den |N|At Steelgrill's Depot, east of Kharanos.| |QID|313|
+T Tools for Steelgrill |QID|400|
+
+R Amberstill Ranch |N| get explore credit for subzones along the way
 A Protecting the Herd |QID|314|
 C Protecting the Herd |QID|314|
 T Protecting the Herd |N|Choose the pants| |QID|314|
