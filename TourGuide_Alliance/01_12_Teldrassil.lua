@@ -65,17 +65,22 @@ B train skills
 
 A Dolanaar Delivery |N|South out of Shadowglen (61,47)| |QID|2159|
 A Zenn's Bidding |N|Along the road to Dolannar (60,56)| |QID|488|
+C Zenn's Bidding |N|East of Dolanaar| |QID|488|
+T Zenn's Bidding |QID|488|
 
 R Dolanaar
-B Sell junk/repair and buy arrows
-h Dolanaar
-T Crown of the Earth (Part 2) |N|South of the inn by the moonwell| |QID|928|
-A Crown of the Earth (Part 3) |QID|929|
-A Recipe of the Kaldorei |N|Need 1 silver to train cooking first| |QID|4161|
+A Seek Redemption! |N|In front of the tower at Dolanaar| |QID|489|
 A Denalan's Earth |N|In front of the tower| |QID|997|
 A A Troubling Breeze |N|In the tower| |QID|475|
 A The Emerald Dreamcatcher |N|In the tower| |QID|2438|
 A Twisted Hatred |QID|932|
+
+B Sell junk/repair and buy arrows
+h Dolanaar
+T Dolanaar Delivery |QID|2159|
+T Crown of the Earth (Part 2) |N|South of the inn by the moonwell| |QID|928|
+A Crown of the Earth (Part 3) |QID|929|
+A Recipe of the Kaldorei |N|Need 1 silver to train cooking first| |QID|4161|
 
 T Denalan's Earth |N|South at the lake (60.90, 68.49)| |QID|997|
 A Timberling Seeds |QID|918|
@@ -84,13 +89,14 @@ C Timberling Seeds |QID|918|
 C Timberling Sprouts |QID|919|
 T Timberling Seeds |QID|918|
 A Rellian Greenspyre |QID|922|
+T Timberling Sprouts |QID|919|
 
+C Seek Redemption! |QID|489|
 C The Emerald Dreamcatcher |N|East of the questgiver in a house is a Dresser (68.01, 59.66)| |QID|2438|
 T A Troubling Breeze |N|East in Starbreeze Village (66,58)| |QID|475|
 A Gnarlpine Corruption |QID|476|
 C Crown of the Earth (Part 3) |U|5619| |QID|929|
-C Zenn's Bidding |N|East of Dolanaar| |QID|488|
-T Zenn's Bidding |QID|488|
+T Seek Redemption! |N|East at Zenn Foulhoof| |QID|489|
 
 C Twisted Hatred |QID|932|
 D RUN OUT OF THE CAVE BEFORE YOU DIE OR YOU WILL SPAWN IN SHADOWGLEN
@@ -99,12 +105,12 @@ T Crown of the Earth (Part 3) |N|Back in Dolanaar| |QID|929|
 A Crown of the Earth (Part 4) |QID|933|
 B sell trash
 
-A Seek Redemption! |N|In front of the tower at Dolanaar| |QID|489|
+T Gnarlpine Corruption |N|top of ramp at entrance to tower| |QID|476|
+T Twisted Hatred |QID|932|
 T The Emerald Dreamcatcher |QID|2438|
 A Ferocitas the Dream Eater |QID|2459|
+B train skills
 
-C Seek Redemption! |QID|489|
-T Seek Redemption! |N|East at Zenn Foulhoof| |QID|489|
 C Recipe of the Kaldorei |QID|4161|
 C Ferocitas the Dream Eater |N|North of Starbreeze. Kill Ferocitas (69.37, 53.41) and open the necklace he drops for the jewel.| |U|8049| |QID|2459|
 D spirit rez in Dolanaar
@@ -115,35 +121,31 @@ C The Road to Darnassus |N|Outside of Ban'ethil Hollow (46,52), south of the roa
 
 C Crown of the Earth (Part 4) |N|Moonwell at the Pools of Arlithrien (42.42, 67.08)| |U|5621| |QID|933|
 A The Glowing Fruit |N|Out of town, south of the Pools of Arlithrien, just outside Gnarlpine Hold (42.61, 76.11)| |QID|930|
-D Die and spirit rez in Dolanaar
-T Crown of the Earth (Part 4) |QID|933|
-A Crown of the Earth (Part 5) |QID|7383|
+D Die and spirit rez in Darnassus
 
-R just west just past the bridge
-D spirit rez in Darnassus
 T Rellian Greenspyre |N|At Cenarion Enclave (38.17, 21.65)| |Z|Darnassus| |QID|922|
-B train skills
-
+A Tumors |QID|923|
 R out of Darnassus and then north to The Oracle Glade
-A The Enchanted Glade |QID|937|
-C Crown of the Earth (Part 5) |N|Moonwell at The Oracle Glade (38.44, 34.08)| |U|18152| |QID|7383|
+
+C Tumors |QID|923|
+G to 1350 exp
 A The Shimmering Frond |N|Slightly northwest of the moonwell (34.7, 28.8)| |QID|931|
+D spirit rez in Darnassus
+
+T Tumors |QID|923|
+A Return to Denalan |QID|2498|
 H Dolanaar
 
-T Dolanaar Delivery |QID|2159|
-T Timberling Sprouts |N|South at the lake (60.90, 68.49)| |QID|919|
+T The Road to Darnassus |QID|487|
+T Ferocitas the Dream Eater |QID|2459|
+T Recipe of the Kaldorei |QID|4161|
+T Crown of the Earth (Part 4) |QID|933|
+
+T Return to Denalan |QID|2498|
 T The Glowing Fruit |QID|930|
 T The Shimmering Frond |QID|931|
 
 D spirit rez in Dolanaar
-
-T The Road to Darnassus |QID|487|
-T Gnarlpine Corruption |N|top of ramp at entrance to tower| |QID|476|
-T Ferocitas the Dream Eater |QID|2459|
-T Twisted Hatred |QID|932|
-T Recipe of the Kaldorei |QID|4161|
-T Crown of the Earth (Part 5) |N|Down by the moonwell again| |QID|7383|
-A Crown of the Earth (Part 6) |QID|935|
 
 A Taming the Beast (Part 1) |C|Hunter| |QID|6063| |R|Night Elf|
 C Taming the Beast (Part 1) |C|Hunter| |N|Tame a webwood lurker (58,60)| |QID|6063| |R|Night Elf|
